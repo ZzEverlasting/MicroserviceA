@@ -1,12 +1,12 @@
 # MicroserviceA
 This is a microservice that converts temperature values from one unit to another. This service utilizes the Flask and Request libraries and is written in Python.
 
-##Requirements:
+Requirements:
     Python 3+
     Flask Library
     Request Library
 
-#Critical --> *Both Libraries Need To Be Installed*
+Critical --> *Both Libraries Need To Be Installed*
 
 URL can be altered to specification, the default URL is set to 'http://127.0.0.1:5000'.
 
@@ -15,7 +15,7 @@ Microservice utilizes a single ENDPOINT '/convert':
     Converter service takes the input unit and temperature value as well as the output unit for its request body.
     The Converter service responds with converted temperature value and unit as well the log of past conversions.
 
-#Example Request:
+Example Request:
     import request
     import json
 
@@ -38,7 +38,7 @@ Microservice utilizes a single ENDPOINT '/convert':
     result = convert_temp(set_url, temperature_value, initial_temp_unit, converted_unit)
     print(result)
 
-#Example Call and Response:
+Example Call and Response:
     Creating a JSON payload seen within the "Example Request", calls the POST request for the set_url and sets the
         parameters for the Converter Service to use.
                 *** {
@@ -61,7 +61,7 @@ To utilize the data used within the Converter Service, save the call function to
         *** "result = convert_temp(set_url, temperature_value, initial_temp_unit, converted_unit)" this saves the conversion data within the result variable
         data within the conversions can be accessed with "result['temperature'], result['unit'], result['log']" for specific data access.
 
-#Conversion Log:
+Conversion Log:
     This is included within the '/convert' endpoint for user history and allows the user to see 10 previous conversions.
     If this feature is not needed:
 
